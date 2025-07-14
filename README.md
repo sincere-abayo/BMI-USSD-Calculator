@@ -13,7 +13,7 @@ A multilingual USSD application for calculating BMI (Body Mass Index) and provid
 - **Input Validation**: Validates user inputs for realistic weight and height ranges
 
 ## BMI Categories
-
+ 
 - **Underweight**: BMI < 18.5
 - **Normal Weight**: BMI 18.5 - 24.9
 - **Overweight**: BMI 25.0 - 29.9
@@ -30,7 +30,7 @@ A multilingual USSD application for calculating BMI (Body Mass Index) and provid
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/sincere-abayo/BMI-USSD-Calculator.git
 cd ussd
 ```
 

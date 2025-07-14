@@ -75,7 +75,7 @@ services:
 
 ```bash
 # Clone your repository
-git clone <your-repo-url>
+git clone https://github.com/sincere-abayo/BMI-USSD-Calculator.git
 cd ussd
 
 # Install dependencies
