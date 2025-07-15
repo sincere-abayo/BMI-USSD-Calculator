@@ -67,7 +67,7 @@ class LanguageManager {
       option2: {
         en: '2. Calculate again',
         fr: '2. Recalculer',
-        rw: '2. Kubarenga'
+        rw: '2. Gusubiramo'
       },
       healthTipsQuestion: {
         en: 'Would you like to receive health tips based on your BMI?',
@@ -92,7 +92,7 @@ class LanguageManager {
       calculateAgain: {
         en: '1. Calculate BMI again',
         fr: '1. Recalculer l\'IMC',
-        rw: '1. Kubarenga BMI'
+        rw: '1. Gusubiramo BMI'
       },
       endSession: {
         en: '2. End session',
