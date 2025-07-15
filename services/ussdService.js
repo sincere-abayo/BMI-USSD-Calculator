@@ -37,12 +37,18 @@ class USSDService {
           session.step = prev.step;
           session.data = prev.data;
           session.language = prev.language;
+          // If we landed on language_selection, clear data and history
+          if (session.step === 'language_selection') {
+            session.data = {};
+            session.history = [];
+          }
           await this.sessionManager.saveSession(sessionId, session);
           return this.getMenuForStep(session);
         } else {
           // If no history, go to language selection
           session.step = 'language_selection';
           session.data = {};
+          session.history = [];
           await this.sessionManager.saveSession(sessionId, session);
           return this.getLanguageSelectionMenu(session.language);
         }
@@ -120,6 +126,9 @@ class USSDService {
   }
 
   handleLanguageSelection(session, text, lang) {
+    // Always clear data and history on language selection
+    session.data = {};
+    session.history = [];
     if (text === '1') {
       session.language = 'en';
       session.step = 'weight_input';
@@ -152,9 +161,14 @@ class USSDService {
     if (isNaN(height) || height <= 0 || height > 300) {
       return this.getInvalidHeightMessage(lang);
     }
+    // Defensive: ensure weight is present and valid
+    const weight = session.data.weight;
+    if (typeof weight !== 'number' || isNaN(weight) || weight <= 0 || weight > 500) {
+      return this.getInvalidWeightMessage(lang);
+    }
     session.data.height = height;
     session.step = 'bmi_result';
-    const bmi = this.bmiCalculator.calculateBMI(session.data.weight, session.data.height);
+    const bmi = this.bmiCalculator.calculateBMI(weight, height);
     const category = this.bmiCalculator.getBMICategory(bmi);
     session.data.bmi = bmi;
     session.data.category = category;

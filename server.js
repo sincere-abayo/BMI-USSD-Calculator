@@ -45,7 +45,7 @@ app.get('/health', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 BMI USSD Server running on port ${PORT}`);
-  console.log(`📞 USSD Endpoint: http://localhost:${PORT}/ussd`);
-  console.log(`🏥 Health Check: http://localhost:${PORT}/health`);
+  console.log(`📞 USSD Endpoint: https://bmi-ussd-calculator.onrender.com/ussd`);
+  console.log(`🏥 Health Check: https://bmi-ussd-calculator.onrender.com/health`);
   console.log(`💡 Server is ready to handle USSD requests!`);
 }); 
