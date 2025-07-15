@@ -230,7 +230,7 @@ class USSDService {
     const messages = {
       en: `CON Your BMI Result:\nBMI: ${bmi.toFixed(1)}\nCategory: ${categoryText}\n\nWould you like to:\n1. Get health tips\n2. Calculate again\n98. Back\n99. Home`,
       fr: `CON Votre Résultat IMC:\nIMC: ${bmi.toFixed(1)}\nCatégorie: ${categoryText}\n\nVoulez-vous:\n1. Obtenir des conseils de santé\n2. Recalculer\n98. Retour\n99. Accueil`,
-      rw: `CON Ibiro byawe bya BMI:\nBMI: ${bmi.toFixed(1)}\nUmutekano: ${categoryText}\n\nEse ushaka:\n1. Kubona inama z'ubuzima\n2. Kubarenga\n98. Subira inyuma\n99. Ahabanza`
+      rw: `CON Ibiro byawe bya BMI:\nBMI: ${bmi.toFixed(1)}\nUmutekano: ${categoryText}\n\nEse ushaka:\n1. Kubona inama z'ubuzima\n2. Gusubiramo\n98. Subira inyuma\n99. Ahabanza`
     };
     return messages[lang] || messages.en;
   }
@@ -248,7 +248,7 @@ class USSDService {
     const messages = {
       en: `CON Health Tips:\n${tips}\n\nWould you like to:\n1. Calculate BMI again\n2. End session\n98. Back\n99. Home`,
       fr: `CON Conseils de Santé:\n${tips}\n\nVoulez-vous:\n1. Recalculer l'IMC\n2. Terminer la session\n98. Retour\n99. Accueil`,
-      rw: `CON Inama z'Ubuzima:\n${tips}\n\nEse ushaka:\n1. Kubarenga BMI\n2. Kurangiza\n98. Subira inyuma\n99. Ahabanza`
+      rw: `CON Inama z'Ubuzima:\n${tips}\n\nEse ushaka:\n1. Gusubiramo BMI\n2. Kurangiza\n98. Subira inyuma\n99. Ahabanza`
     };
     return messages[lang] || messages.en;
   }

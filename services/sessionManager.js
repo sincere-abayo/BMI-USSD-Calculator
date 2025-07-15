@@ -9,7 +9,7 @@ class SessionManager {
   async initRedis() {
     try {
       this.client = redis.createClient({
-        url: process.env.REDIS_URL || 'redis://localhost:6379'
+        url: 'redis-cli --tls -u redis://default:a2abe246cf7b46f4be178cbbbc341c27@gusc1-first-seagull-32179.upstash.io:32179'
       });
 
       this.client.on('error', (err) => {
