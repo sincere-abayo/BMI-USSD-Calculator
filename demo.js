@@ -100,11 +100,11 @@ async function runDemo() {
   // Test different scenarios
   await testUSSDFlow('English', 70, 170, 'demo-en-' + Date.now());
   await testUSSDFlow('French', 65, 165, 'demo-fr-' + Date.now());
-  await testUSSDFlow('Swahili', 80, 175, 'demo-sw-' + Date.now());
+  await testUSSDFlow('Kinyarwanda', 80, 175, 'demo-rw-' + Date.now());
   
   console.log('\n🎉 Demo completed!');
   console.log('\n📋 Summary:');
-  console.log('- ✅ Multilingual support (English, French, Swahili)');
+  console.log('- ✅ Multilingual support (English, French, Kinyarwanda)');
   console.log('- ✅ BMI calculation with accurate results');
   console.log('- ✅ Health category classification');
   console.log('- ✅ Personalized health tips');

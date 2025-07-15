@@ -4,22 +4,22 @@ class LanguageManager {
       underweight: {
         en: 'Underweight',
         fr: 'Insuffisance pondérale',
-        sw: 'Uzito wa chini'
+        rw: 'Ibiro bike'
       },
       normal: {
         en: 'Normal Weight',
         fr: 'Poids normal',
-        sw: 'Uzito wa kawaida'
+        rw: 'Ibiro by\'ubusanzwe'
       },
       overweight: {
         en: 'Overweight',
         fr: 'Surpoids',
-        sw: 'Uzito wa juu'
+        rw: 'Ibiro byinshi'
       },
       obese: {
         en: 'Obese',
         fr: 'Obèse',
-        sw: 'Uzito wa juu sana'
+        rw: 'Ibiro byinshi cyane'
       }
     };
 
@@ -27,97 +27,97 @@ class LanguageManager {
       welcome: {
         en: 'Welcome to BMI Calculator',
         fr: 'Bienvenue au Calculateur d\'IMC',
-        sw: 'Karibu kwenye Kikokotoo cha BMI'
+        rw: 'Murakaza neza kuri Kalkulateri ya BMI'
       },
       selectLanguage: {
         en: 'Please select your language:',
         fr: 'Veuillez sélectionner votre langue:',
-        sw: 'Tafadhali chagua lugha yako:'
+        rw: 'Nyamuneka hitamo ururimi rwawe:'
       },
       enterWeight: {
         en: 'Please enter your weight in kilograms (KG):',
         fr: 'Veuillez entrer votre poids en kilogrammes (KG):',
-        sw: 'Tafadhali weka uzito wako kwa kilogramu (KG):'
+        rw: 'Nyamuneka andika ibiro byawe mu magiramu (KG):'
       },
       enterHeight: {
         en: 'Please enter your height in centimeters (CM):',
         fr: 'Veuillez entrer votre taille en centimètres (CM):',
-        sw: 'Tafadhali weka urefu wako kwa sentimita (CM):'
+        rw: 'Nyamuneka andika uburebure bwawe mu masentimetero (CM):'
       },
       bmiResult: {
         en: 'Your BMI Result:',
         fr: 'Votre Résultat IMC:',
-        sw: 'Matokeo yako ya BMI:'
+        rw: 'Ibiro byawe bya BMI:'
       },
       category: {
         en: 'Category:',
         fr: 'Catégorie:',
-        sw: 'Kategoria:'
+        rw: 'Umutekano:'
       },
       getHealthTips: {
         en: 'Would you like to:',
         fr: 'Voulez-vous:',
-        sw: 'Je, ungependa:'
+        rw: 'Ese ushaka:'
       },
       option1: {
         en: '1. Get health tips',
         fr: '1. Obtenir des conseils de santé',
-        sw: '1. Kupata vidokezo vya afya'
+        rw: '1. Kubona inama z\'ubuzima'
       },
       option2: {
         en: '2. Calculate again',
         fr: '2. Recalculer',
-        sw: '2. Kuhesabu tena'
+        rw: '2. Kubarenga'
       },
       healthTipsQuestion: {
         en: 'Would you like to receive health tips based on your BMI?',
         fr: 'Voulez-vous recevoir des conseils de santé basés sur votre IMC?',
-        sw: 'Je, ungependa kupokea vidokezo vya afya kulingana na BMI yako?'
+        rw: 'Ese ushaka kubona inama z\'ubuzima kubera BMI yawe?'
       },
       yesShowTips: {
         en: '1. Yes, show me tips',
         fr: '1. Oui, montrez-moi des conseils',
-        sw: '1. Ndiyo, nionyeshe vidokezo'
+        rw: '1. Yego, nyereka inama'
       },
       noThankYou: {
         en: '2. No, thank you',
         fr: '2. Non, merci',
-        sw: '2. Hapana, asante'
+        rw: '2. Oya, urakoze'
       },
       healthTips: {
         en: 'Health Tips:',
         fr: 'Conseils de Santé:',
-        sw: 'Vidokezo vya Afya:'
+        rw: 'Inama z\'Ubuzima:'
       },
       calculateAgain: {
         en: '1. Calculate BMI again',
         fr: '1. Recalculer l\'IMC',
-        sw: '1. Kuhesabu BMI tena'
+        rw: '1. Kubarenga BMI'
       },
       endSession: {
         en: '2. End session',
         fr: '2. Terminer la session',
-        sw: '2. Kumaliza kipindi'
+        rw: '2. Kurangiza'
       },
       invalidWeight: {
         en: 'Invalid weight! Please enter a valid weight between 1-500 KG.',
         fr: 'Poids invalide! Veuillez entrer un poids valide entre 1-500 KG.',
-        sw: 'Uzito si sahihi! Tafadhali weka uzito sahihi kati ya 1-500 KG.'
+        rw: 'Ibiro ntabwo ari byo! Nyamuneka andika ibiro byemewe hagati ya 1-500 KG.'
       },
       invalidHeight: {
         en: 'Invalid height! Please enter a valid height between 1-300 CM.',
         fr: 'Taille invalide! Veuillez entrer une taille valide entre 1-300 CM.',
-        sw: 'Urefu si sahihi! Tafadhali weka urefu sahihi kati ya 1-300 CM.'
+        rw: 'Uburebure ntabwo ari bwo! Nyamuneka andika uburebure bwemewe hagati ya 1-300 CM.'
       },
       goodbye: {
         en: 'Thank you for using BMI Calculator. Stay healthy!',
         fr: 'Merci d\'avoir utilisé le Calculateur d\'IMC. Restez en bonne santé!',
-        sw: 'Asante kwa kutumia Kikokotoo cha BMI. Kaa na afya!'
+        rw: 'Urakoze kwifashisha Kalkulateri ya BMI. Komeza kuba ufite ubuzima!'
       },
       error: {
         en: 'An error occurred. Please try again.',
         fr: 'Une erreur s\'est produite. Veuillez réessayer.',
-        sw: 'Kuna hitilafu. Tafadhali jaribu tena.'
+        rw: 'Hari ikibazo. Nyamuneka ongera ugerageze.'
       }
     };
   }
@@ -138,19 +138,19 @@ class LanguageManager {
     return [
       { code: 'en', name: 'English' },
       { code: 'fr', name: 'Français' },
-      { code: 'sw', name: 'Kiswahili' }
+      { code: 'rw', name: 'Kinyarwanda' }
     ];
   }
 
   isValidLanguage(languageCode) {
-    return ['en', 'fr', 'sw'].includes(languageCode);
+    return ['en', 'fr', 'rw'].includes(languageCode);
   }
 
   getLanguageName(languageCode) {
     const languages = {
       en: 'English',
       fr: 'Français',
-      sw: 'Kiswahili'
+      rw: 'Kinyarwanda'
     };
     return languages[languageCode] || languageCode;
   }
@@ -178,12 +178,12 @@ class LanguageManager {
       weight: {
         en: 'Please enter a valid weight between 1-500 KG.',
         fr: 'Veuillez entrer un poids valide entre 1-500 KG.',
-        sw: 'Tafadhali weka uzito sahihi kati ya 1-500 KG.'
+        rw: 'Nyamuneka andika ibiro byemewe hagati ya 1-500 KG.'
       },
       height: {
         en: 'Please enter a valid height between 1-300 CM.',
         fr: 'Veuillez entrer une taille valide entre 1-300 CM.',
-        sw: 'Tafadhali weka urefu sahihi kati ya 1-300 CM.'
+        rw: 'Nyamuneka andika uburebure bwemewe hagati ya 1-300 CM.'
       }
     };
 
@@ -196,12 +196,12 @@ class LanguageManager {
       restart: {
         en: 'Session restarted. Please enter your weight:',
         fr: 'Session redémarrée. Veuillez entrer votre poids:',
-        sw: 'Kipindi kimeanza tena. Tafadhali weka uzito wako:'
+        rw: 'Gahunda yatangiriye. Nyamuneka andika ibiro byawe:'
       },
       continue: {
         en: 'Continuing with your session...',
         fr: 'Continuer avec votre session...',
-        sw: 'Kuendelea na kipindi chako...'
+        rw: 'Komeza gahunda yawe...'
       }
     };
 

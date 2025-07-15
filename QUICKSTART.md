@@ -54,7 +54,7 @@ node demo.js
 
 1. **English** - Select option 1
 2. **French** - Select option 2
-3. **Swahili** - Select option 3
+3. **Kinyarwanda** - Select option 3
 
 ## 📊 BMI Categories
 
@@ -127,7 +127,7 @@ node test/test-ussd.js
 
 ## 📈 Features
 
-✅ **Multilingual Support** - English, French, Swahili  
+✅ **Multilingual Support** - English, French, Kinyarwanda  
 ✅ **Accurate BMI Calculation** - Weight (KG) and Height (CM)  
 ✅ **Health Categories** - Underweight, Normal, Overweight, Obese  
 ✅ **Personalized Health Tips** - Based on BMI category  

@@ -1,10 +1,10 @@
 # BMI USSD Calculator
 
-A multilingual USSD application for calculating BMI (Body Mass Index) and providing personalized health tips. The application supports English, French, and Swahili languages.
+A multilingual USSD application for calculating BMI (Body Mass Index) and providing personalized health tips. The application supports English, French, and Kinyarwanda languages.
 
 ## Features
 
-- **Multilingual Support**: English, French, and Swahili
+- **Multilingual Support**: English, French, and Kinyarwanda
 - **BMI Calculation**: Accurate BMI calculation using weight (KG) and height (CM)
 - **Health Categories**: Classifies users as underweight, normal, overweight, or obese
 - **Personalized Health Tips**: Provides specific health advice based on BMI category
@@ -13,7 +13,7 @@ A multilingual USSD application for calculating BMI (Body Mass Index) and provid
 - **Input Validation**: Validates user inputs for realistic weight and height ranges
 
 ## BMI Categories
- 
+
 - **Underweight**: BMI < 18.5
 - **Normal Weight**: BMI 18.5 - 24.9
 - **Overweight**: BMI 25.0 - 29.9
@@ -90,7 +90,7 @@ The server will start on port 3000 (or the port specified in your config).
 
 ## USSD Flow
 
-1. **Language Selection**: User chooses preferred language (English, French, Swahili)
+1. **Language Selection**: User chooses preferred language (English, French, Kinyarwanda)
 2. **Weight Input**: User enters weight in kilograms
 3. **Height Input**: User enters height in centimeters
 4. **BMI Result**: Display calculated BMI and category

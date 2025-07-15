@@ -104,7 +104,7 @@ class USSDService {
       session.step = 'weight_input';
       return this.getWeightInputMenu(lang);
     } else if (text === '3') {
-      session.language = 'sw';
+      session.language = 'rw';
       session.step = 'weight_input';
       return this.getWeightInputMenu(lang);
     } else {
@@ -190,19 +190,19 @@ Please select your language:
 
 1. English
 2. Français
-3. Kiswahili`,
+3. Kinyarwanda`,
       fr: `CON Bienvenue au Calculateur d'IMC
 Veuillez sélectionner votre langue:
 
 1. English
 2. Français
-3. Kiswahili`,
-      sw: `CON Karibu kwenye Kikokotoo cha BMI
-Tafadhali chagua lugha yako:
+3. Kinyarwanda`,
+      rw: `CON Murakaza neza kuri Kalkulateri ya BMI
+Nyamuneka hitamo ururimi rwawe:
 
 1. English
 2. Français
-3. Kiswahili`
+3. Kinyarwanda`
     };
     
     return messages[lang] || messages.en;
@@ -214,8 +214,8 @@ Tafadhali chagua lugha yako:
 Example: 70`,
       fr: `CON Veuillez entrer votre poids en kilogrammes (KG):
 Exemple: 70`,
-      sw: `CON Tafadhali weka uzito wako kwa kilogramu (KG):
-Mfano: 70`
+      rw: `CON Nyamuneka andika ibiro byawe mu magiramu (KG):
+Urugero: 70`
     };
     
     return messages[lang] || messages.en;
@@ -227,8 +227,8 @@ Mfano: 70`
 Example: 170`,
       fr: `CON Veuillez entrer votre taille en centimètres (CM):
 Exemple: 170`,
-      sw: `CON Tafadhali weka urefu wako kwa sentimita (CM):
-Mfano: 170`
+      rw: `CON Nyamuneka andika uburebure bwawe mu masentimetero (CM):
+Urugero: 170`
     };
     
     return messages[lang] || messages.en;
@@ -253,13 +253,13 @@ Catégorie: ${categoryText}
 Voulez-vous:
 1. Obtenir des conseils de santé
 2. Recalculer`,
-      sw: `CON Matokeo yako ya BMI:
+      rw: `CON Ibiro byawe bya BMI:
 BMI: ${bmi.toFixed(1)}
-Kategoria: ${categoryText}
+Umutekano: ${categoryText}
 
-Je, ungependa:
-1. Kupata vidokezo vya afya
-2. Kuhesabu tena`
+Ese ushaka:
+1. Kubona inama z'ubuzima
+2. Kubarenga`
     };
     
     return messages[lang] || messages.en;
@@ -275,10 +275,10 @@ Je, ungependa:
 
 1. Oui, montrez-moi des conseils
 2. Non, merci`,
-      sw: `CON Je, ungependa kupokea vidokezo vya afya kulingana na BMI yako?
+      rw: `CON Ese ushaka kubona inama z'ubuzima kubera BMI yawe?
 
-1. Ndiyo, nionyeshe vidokezo
-2. Hapana, asante`
+1. Yego, nyereka inama
+2. Oya, urakoze`
     };
     
     return messages[lang] || messages.en;
@@ -298,12 +298,12 @@ ${tips}
 Voulez-vous:
 1. Recalculer l'IMC
 2. Terminer la session`,
-      sw: `CON Vidokezo vya Afya:
+      rw: `CON Inama z'Ubuzima:
 ${tips}
 
-Je, ungependa:
-1. Kuhesabu BMI tena
-2. Kumaliza kipindi`
+Ese ushaka:
+1. Kubarenga BMI
+2. Kurangiza`
     };
     
     return messages[lang] || messages.en;
@@ -313,7 +313,7 @@ Je, ungependa:
     const messages = {
       en: `CON Invalid weight! Please enter a valid weight between 1-500 KG.`,
       fr: `CON Poids invalide! Veuillez entrer un poids valide entre 1-500 KG.`,
-      sw: `CON Uzito si sahihi! Tafadhali weka uzito sahihi kati ya 1-500 KG.`
+      rw: `CON Ibiro ntabwo ari byo! Nyamuneka andika ibiro byemewe hagati ya 1-500 KG.`
     };
     
     return messages[lang] || messages.en;
@@ -323,7 +323,7 @@ Je, ungependa:
     const messages = {
       en: `CON Invalid height! Please enter a valid height between 1-300 CM.`,
       fr: `CON Taille invalide! Veuillez entrer une taille valide entre 1-300 CM.`,
-      sw: `CON Urefu si sahihi! Tafadhali weka urefu sahihi kati ya 1-300 CM.`
+      rw: `CON Uburebure ntabwo ari bwo! Nyamuneka andika uburebure bwemewe hagati ya 1-300 CM.`
     };
     
     return messages[lang] || messages.en;
@@ -333,7 +333,7 @@ Je, ungependa:
     const messages = {
       en: `END Thank you for using BMI Calculator. Stay healthy!`,
       fr: `END Merci d'avoir utilisé le Calculateur d'IMC. Restez en bonne santé!`,
-      sw: `END Asante kwa kutumia Kikokotoo cha BMI. Kaa na afya!`
+      rw: `END Urakoze kwifashisha Kalkulateri ya BMI. Komeza kuba ufite ubuzima!`
     };
     
     return messages[lang] || messages.en;

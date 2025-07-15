@@ -18,13 +18,13 @@ class HealthTips {
           "• Incluez des exercices de musculation",
           "• Considérez des suppléments nutritionnels si nécessaire"
         ],
-        sw: [
-          "• Kula kalori zaidi kuliko unazotumia",
-          "• Jumuisha vyakula vya protini (nyama, samaki, mayai, maharagwe)",
-          "• Ongeza mafuta mazuri (karanga, parachichi, mafuta ya zeituni)",
-          "• Kula milo ya mara kwa mara siku nzima",
-          "• Jumuisha mazoezi ya kujenga nguvu",
-          "• Fikiria vitamini ikiwa inahitajika"
+        rw: [
+          "• Rya kalori nyinshi kurusha uko ukoresha",
+          "• Ongera ibiryo byuzuye protini (inyama, ifi, amagi, ibishyimbo)",
+          "• Ongera amavuta meza (ubunyobwa, avoka, amavuta y'umutemeri)",
+          "• Rya amafunguro ya buri munsi",
+          "• Ongera imikino yo gufasha ububasha",
+          "• Tekereza vitamini niba akenewe"
         ]
       },
       normal: {
@@ -44,13 +44,13 @@ class HealthTips {
           "• Dormez suffisamment (7-9 heures)",
           "• Évitez les aliments transformés et l'excès de sucre"
         ],
-        sw: [
-          "• Weka uzito wako wa sasa wenye afya",
-          "• Kula chakula cha usawa na matunda na mboga",
-          "• Fanya mazoezi mara kwa mara (dakika 150 kwa wiki)",
-          "• Kaa na maji kwa kunywa maji",
-          "• Lala kutosha (saa 7-9)",
-          "• Epuka vyakula vilivyochakatwa na sukari ya ziada"
+        rw: [
+          "• Komeza ibiro byawe by'ubu ufite ubuzima",
+          "• Rya amafunguro yuzuye amashyamba n'imboga",
+          "• Kora imikino ya buri munsi (iminota 150 ku wa cumi)",
+          "• Nywa amazi ya buri munsi",
+          "• Rara amasaha 7-9",
+          "• Reka ibiryo byoherejwe n'isukari nyinshi"
         ]
       },
       overweight: {
@@ -70,13 +70,13 @@ class HealthTips {
           "• Pratiquez le contrôle des portions",
           "• Considérez travailler avec un nutritionniste"
         ],
-        sw: [
-          "• Punguza kalori kwa hatua",
-          "• Ongeza shughuli za mwili (dakika 30 kwa siku)",
-          "• Kula mboga zaidi na protini nyepesi",
-          "• Punguza vyakula vilivyochakatwa na vinywaji vya sukari",
-          "• Dhibiti kiasi cha chakula",
-          "• Fikiria kufanya kazi na mtaalam wa lishe"
+        rw: [
+          "• Kugabanya kalori buhoro buhoro",
+          "• Ongera imikino (iminota 30 ku munsi)",
+          "• Rya imboga nyinshi n'ibiryo byuzuye protini",
+          "• Reka ibiryo byoherejwe n'ibinyobwa byuzuye isukari",
+          "• Kugenzura umubare w'ibiryo",
+          "• Tekereza gukorana n'umwarimu w'ibiryo"
         ]
       },
       obese: {
@@ -96,13 +96,13 @@ class HealthTips {
           "• Rejoignez un groupe de soutien ou un programme de perte de poids",
           "• Considérez les options médicales de perte de poids"
         ],
-        sw: [
-          "• Shauriana na mtaalam wa afya kwa mwongozo",
-          "• Anza na mazoezi ya athari ya chini (kutembea, kuogelea)",
-          "• Elekeza kwenye udhibiti wa kiasi na mpango wa milo",
-          "• Weka daftari la chakula kufuatilia ulaji",
-          "• Jiunge na kikundi cha usaidizi au mpango wa kupunguza uzito",
-          "• Fikiria chaguzi za matibabu za kupunguza uzito"
+        rw: [
+          "• Vugana n'umwarimu w'ubuzima kugira ngo akugenzure",
+          "• Tangira imikino itagira ingaruka (kugenda, koga)",
+          "• Tekereza kugenzura umubare w'ibiryo n'uburyo bwo kurya",
+          "• Andika ibiryo uko ubirya",
+          "• Jya mu itsinda ry'ubufasha cyangwa gahunda yo kugabanya ibiro",
+          "• Tekereza uburyo bwo kugabanya ibiro"
         ]
       }
     };
@@ -134,12 +134,12 @@ class HealthTips {
         "• Dormez suffisamment",
         "• Consultez un professionnel de la santé"
       ],
-      sw: [
-        "• Kula chakula cha usawa",
-        "• Fanya mazoezi mara kwa mara",
-        "• Kaa na maji",
-        "• Lala kutosha",
-        "• Shauriana na mtaalam wa afya"
+      rw: [
+        "• Rya amafunguro yuzuye",
+        "• Kora imikino ya buri munsi",
+        "• Nywa amazi",
+        "• Rara amasaha akenewe",
+        "• Vugana n'umwarimu w'ubuzima"
       ]
     };
 
@@ -174,22 +174,22 @@ class HealthTips {
       underweight: {
         en: "Focus on strength training and muscle building exercises",
         fr: "Concentrez-vous sur la musculation et les exercices de développement musculaire",
-        sw: "Elekeza kwenye mazoezi ya nguvu na kujenga misuli"
+        rw: "Tekereza imikino yo gufasha ububasha n'ubwoko"
       },
       normal: {
         en: "Mix of cardio and strength training for maintenance",
         fr: "Mélange de cardio et de musculation pour l'entretien",
-        sw: "Mchanganyiko wa kardio na mazoezi ya nguvu kwa matunzo"
+        rw: "Guhuza imikino yo gufasha umutima n'ububasha"
       },
       overweight: {
         en: "Start with walking, swimming, or cycling",
         fr: "Commencez par la marche, la natation ou le vélo",
-        sw: "Anza na kutembea, kuogelea, au baiskeli"
+        rw: "Tangira kugenda, koga, cyangwa gutwara igare"
       },
       obese: {
         en: "Begin with low-impact activities like walking",
         fr: "Commencez par des activités à faible impact comme la marche",
-        sw: "Anza na shughuli za athari ya chini kama kutembea"
+        rw: "Tangira imikino itagira ingaruka nka kugenda"
       }
     };
 
@@ -201,22 +201,22 @@ class HealthTips {
       underweight: {
         en: "Increase protein and healthy fat intake",
         fr: "Augmentez l'apport en protéines et en graisses saines",
-        sw: "Ongeza ulaji wa protini na mafuta mazuri"
+        rw: "Ongera ibiryo byuzuye protini n'amavuta meza"
       },
       normal: {
         en: "Maintain balanced nutrition with variety",
         fr: "Maintenez une nutrition équilibrée avec de la variété",
-        sw: "Weka lishe ya usawa na aina mbalimbali"
+        rw: "Komeza amafunguro yuzuye n'ubwoko bwinshi"
       },
       overweight: {
         en: "Reduce portion sizes and increase vegetables",
         fr: "Réduisez la taille des portions et augmentez les légumes",
-        sw: "Punguza ukubwa wa sehemu na ongeza mboga"
+        rw: "Kugabanya umubare w'ibiryo n'ongera imboga"
       },
       obese: {
         en: "Focus on whole foods and portion control",
         fr: "Concentrez-vous sur les aliments entiers et le contrôle des portions",
-        sw: "Elekeza kwenye vyakula kamili na udhibiti wa sehemu"
+        rw: "Tekereza ibiryo byuzuye n'uburyo bwo kugenzura"
       }
     };
 
