@@ -127,21 +127,30 @@ class USSDService {
 
   handleLanguageSelection(session, text, lang) {
     // Always clear data and history on language selection
-    session.data = {};
-    session.history = [];
+    // FULLY RESET session except id and phoneNumber
     if (text === '1') {
       session.language = 'en';
       session.step = 'weight_input';
+      session.data = {};
+      session.history = [];
       return this.getWeightInputMenu('en');
     } else if (text === '2') {
       session.language = 'fr';
       session.step = 'weight_input';
+      session.data = {};
+      session.history = [];
       return this.getWeightInputMenu('fr');
     } else if (text === '3') {
       session.language = 'rw';
       session.step = 'weight_input';
+      session.data = {};
+      session.history = [];
       return this.getWeightInputMenu('rw');
     } else {
+      // If invalid input, stay on language selection
+      session.step = 'language_selection';
+      session.data = {};
+      session.history = [];
       return this.getLanguageSelectionMenu(lang);
     }
   }
