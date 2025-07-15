@@ -52,13 +52,6 @@ class USSDService {
           await this.sessionManager.saveSession(sessionId, session);
           return this.getLanguageSelectionMenu(session.language);
         }
-      } else if (lastInput === '99') {
-        // Home: reset to language selection
-        session.step = 'language_selection';
-        session.data = {};
-        session.history = [];
-        await this.sessionManager.saveSession(sessionId, session);
-        return this.getLanguageSelectionMenu(session.language);
       }
 
       // Save current step to history before moving forward
@@ -231,18 +224,18 @@ class USSDService {
 
   getWeightInputMenu(lang) {
     const messages = {
-      en: `CON Please enter your weight in kilograms (KG):\nExample: 70\n98. Back\n99. Home`,
-      fr: `CON Veuillez entrer votre poids en kilogrammes (KG):\nExemple: 70\n98. Retour\n99. Accueil`,
-      rw: `CON Nyamuneka andika ibiro byawe mu magiramu (KG):\nUrugero: 70\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Please enter your weight in kilograms (KG):\nExample: 70\n98. Back`,
+      fr: `CON Veuillez entrer votre poids en kilogrammes (KG):\nExemple: 70\n98. Retour`,
+      rw: `CON Nyamuneka andika ibiro byawe mu magiramu (KG):\nUrugero: 70\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
 
   getHeightInputMenu(lang) {
     const messages = {
-      en: `CON Please enter your height in centimeters (CM):\nExample: 170\n98. Back\n99. Home`,
-      fr: `CON Veuillez entrer votre taille en centimètres (CM):\nExemple: 170\n98. Retour\n99. Accueil`,
-      rw: `CON Nyamuneka andika uburebure bwawe mu masentimetero (CM):\nUrugero: 170\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Please enter your height in centimeters (CM):\nExample: 170\n98. Back`,
+      fr: `CON Veuillez entrer votre taille en centimètres (CM):\nExemple: 170\n98. Retour`,
+      rw: `CON Nyamuneka andika uburebure bwawe mu masentimetero (CM):\nUrugero: 170\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
@@ -251,45 +244,45 @@ class USSDService {
     const { bmi, category } = data;
     const categoryText = this.languageManager.getCategoryText(category, lang);
     const messages = {
-      en: `CON Your BMI Result:\nBMI: ${bmi.toFixed(1)}\nCategory: ${categoryText}\n\nWould you like to:\n1. Get health tips\n2. Calculate again\n98. Back\n99. Home`,
-      fr: `CON Votre Résultat IMC:\nIMC: ${bmi.toFixed(1)}\nCatégorie: ${categoryText}\n\nVoulez-vous:\n1. Obtenir des conseils de santé\n2. Recalculer\n98. Retour\n99. Accueil`,
-      rw: `CON Ibiro byawe bya BMI:\nBMI: ${bmi.toFixed(1)}\nUmutekano: ${categoryText}\n\nEse ushaka:\n1. Kubona inama z'ubuzima\n2. Gusubiramo\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Your BMI Result:\nBMI: ${bmi.toFixed(1)}\nCategory: ${categoryText}\n\nWould you like to:\n1. Get health tips\n2. Calculate again\n98. Back`,
+      fr: `CON Votre Résultat IMC:\nIMC: ${bmi.toFixed(1)}\nCatégorie: ${categoryText}\n\nVoulez-vous:\n1. Obtenir des conseils de santé\n2. Recalculer\n98. Retour`,
+      rw: `CON Ibiro byawe bya BMI:\nBMI: ${bmi.toFixed(1)}\nUmutekano: ${categoryText}\n\nEse ushaka:\n1. Kubona inama z'ubuzima\n2. Gusubiramo\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
 
   getHealthTipsQuestionMenu(lang) {
     const messages = {
-      en: `CON Would you like to receive health tips based on your BMI?\n\n1. Yes, show me tips\n2. No, thank you\n98. Back\n99. Home`,
-      fr: `CON Voulez-vous recevoir des conseils de santé basés sur votre IMC?\n\n1. Oui, montrez-moi des conseils\n2. Non, merci\n98. Retour\n99. Accueil`,
-      rw: `CON Ese ushaka kubona inama z'ubuzima kubera BMI yawe?\n\n1. Yego, nyereka inama\n2. Oya, urakoze\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Would you like to receive health tips based on your BMI?\n\n1. Yes, show me tips\n2. No, thank you\n98. Back`,
+      fr: `CON Voulez-vous recevoir des conseils de santé basés sur votre IMC?\n\n1. Oui, montrez-moi des conseils\n2. Non, merci\n98. Retour`,
+      rw: `CON Ese ushaka kubona inama z'ubuzima kubera BMI yawe?\n\n1. Yego, nyereka inama\n2. Oya, urakoze\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
 
   getHealthTipsResultMenu(tips, lang) {
     const messages = {
-      en: `CON Health Tips:\n${tips}\n\nWould you like to:\n1. Calculate BMI again\n2. End session\n98. Back\n99. Home`,
-      fr: `CON Conseils de Santé:\n${tips}\n\nVoulez-vous:\n1. Recalculer l'IMC\n2. Terminer la session\n98. Retour\n99. Accueil`,
-      rw: `CON Inama z'Ubuzima:\n${tips}\n\nEse ushaka:\n1. Gusubiramo BMI\n2. Kurangiza\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Health Tips:\n${tips}\n\nWould you like to:\n1. Calculate BMI again\n2. End session\n98. Back`,
+      fr: `CON Conseils de Santé:\n${tips}\n\nVoulez-vous:\n1. Recalculer l'IMC\n2. Terminer la session\n98. Retour`,
+      rw: `CON Inama z'Ubuzima:\n${tips}\n\nEse ushaka:\n1. Gusubiramo BMI\n2. Kurangiza\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
 
   getInvalidWeightMessage(lang) {
     const messages = {
-      en: `CON Invalid weight! Please enter a valid weight between 1-500 KG.\n98. Back\n99. Home`,
-      fr: `CON Poids invalide! Veuillez entrer un poids valide entre 1-500 KG.\n98. Retour\n99. Accueil`,
-      rw: `CON Ibiro ntabwo ari byo! Nyamuneka andika ibiro byemewe hagati ya 1-500 KG.\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Invalid weight! Please enter a valid weight between 1-500 KG.\n98. Back`,
+      fr: `CON Poids invalide! Veuillez entrer un poids valide entre 1-500 KG.\n98. Retour`,
+      rw: `CON Ibiro ntabwo ari byo! Nyamuneka andika ibiro byemewe hagati ya 1-500 KG.\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
 
   getInvalidHeightMessage(lang) {
     const messages = {
-      en: `CON Invalid height! Please enter a valid height between 1-300 CM.\n98. Back\n99. Home`,
-      fr: `CON Taille invalide! Veuillez entrer une taille valide entre 1-300 CM.\n98. Retour\n99. Accueil`,
-      rw: `CON Uburebure ntabwo ari bwo! Nyamuneka andika uburebure bwemewe hagati ya 1-300 CM.\n98. Subira inyuma\n99. Ahabanza`
+      en: `CON Invalid height! Please enter a valid height between 1-300 CM.\n98. Back`,
+      fr: `CON Taille invalide! Veuillez entrer une taille valide entre 1-300 CM.\n98. Retour`,
+      rw: `CON Uburebure ntabwo ari bwo! Nyamuneka andika uburebure bwemewe hagati ya 1-300 CM.\n98. Subira inyuma`
     };
     return messages[lang] || messages.en;
   }
