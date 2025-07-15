@@ -98,15 +98,15 @@ class USSDService {
     if (text === '1') {
       session.language = 'en';
       session.step = 'weight_input';
-      return this.getWeightInputMenu(lang);
+      return this.getWeightInputMenu('en');
     } else if (text === '2') {
       session.language = 'fr';
       session.step = 'weight_input';
-      return this.getWeightInputMenu(lang);
+      return this.getWeightInputMenu('fr');
     } else if (text === '3') {
       session.language = 'rw';
       session.step = 'weight_input';
-      return this.getWeightInputMenu(lang);
+      return this.getWeightInputMenu('rw');
     } else {
       return this.getLanguageSelectionMenu(lang);
     }
