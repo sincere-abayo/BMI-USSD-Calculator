@@ -13,9 +13,10 @@ class USSDService {
 
   async handleUSSD(sessionId, phoneNumber, text) {
     try {
-      // Get or create session
+      // Africa's Talking sends the full chain, e.g. 1*70*170*1*1
+      const inputs = text ? text.split('*') : [];
       let session = await this.sessionManager.getSession(sessionId);
-      
+
       if (!session) {
         session = {
           id: sessionId,
@@ -27,12 +28,38 @@ class USSDService {
         await this.sessionManager.saveSession(sessionId, session);
       }
 
-      // Handle the USSD flow
-      const response = await this.processStep(session, text);
-      
-      // Update session
+      // Determine step based on input length
+      let response;
+      switch (inputs.length) {
+        case 0:
+          session.step = 'language_selection';
+          response = this.getLanguageSelectionMenu(session.language);
+          break;
+        case 1:
+          response = this.handleLanguageSelection(session, inputs[0], session.language);
+          break;
+        case 2:
+          response = this.handleWeightInput(session, inputs[1], session.language);
+          break;
+        case 3:
+          response = this.handleHeightInput(session, inputs[2], session.language);
+          break;
+        case 4:
+          response = this.handleBMIResult(session, inputs[3], session.language);
+          break;
+        case 5:
+          response = this.handleHealthTipsQuestion(session, inputs[4], session.language);
+          break;
+        case 6:
+          response = this.handleHealthTipsResult(session, inputs[5], session.language);
+          break;
+        default:
+          // If more steps, just repeat the last handler
+          response = this.handleHealthTipsResult(session, inputs[inputs.length - 1], session.language);
+      }
+
+      // Save session after every step
       await this.sessionManager.saveSession(sessionId, session);
-      
       return response;
     } catch (error) {
       console.error('USSD Service Error:', error);
@@ -71,15 +98,15 @@ class USSDService {
     if (text === '1') {
       session.language = 'en';
       session.step = 'weight_input';
-      return this.getWeightInputMenu('en');
+      return this.getWeightInputMenu(lang);
     } else if (text === '2') {
       session.language = 'fr';
       session.step = 'weight_input';
-      return this.getWeightInputMenu('fr');
+      return this.getWeightInputMenu(lang);
     } else if (text === '3') {
       session.language = 'sw';
       session.step = 'weight_input';
-      return this.getWeightInputMenu('sw');
+      return this.getWeightInputMenu(lang);
     } else {
       return this.getLanguageSelectionMenu(lang);
     }
